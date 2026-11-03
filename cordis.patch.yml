@@ -1,0 +1,6 @@
+# DSH bundle patch: 把 neko-persona-dsh 作为插件插入插件栈。
+# 字段含义见 dsh-agent-preset 的 cordis-plugin-development 文档（host-plugin.md）。
+- insert:
+    - id: neko-persona-dsh
+      name: 'neko-persona-dsh'
+      config: {}

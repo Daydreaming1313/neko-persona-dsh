@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Neko Persona (猫娘人格)",
+    "description": "Injects a tsundere catgirl persona into DeepSeek Harness via a stateful system-prompt section plus guarded lifecycle hooks. Switch presets with /档位."
+  }
+}
