@@ -21,6 +21,8 @@
 | 会话句柄 | `agent.session` 是事件源 Session（`session/event`、`surface` 等） | `@deepseek-ai/dsh-session/lib/types/index.d.ts` |
 | 安装 | `dsh plugin --profile <name> <pnpm-args...>` 把剩余参数透传给 profile 目录下的 pnpm | `dsh` CLI `--help` / `plugin-BiveYA7h.js` |
 | 发现 | 插件以 npm 包形式装进 profile 的 `node_modules`，并在 `cordis.patch.yml` 的 `insert` / bundle 中被引用 | `profiles/desktop/cordis.patch.yml` 结构 |
+| 依赖注入 | cordis 的 `ctx` 是 DI 代理，**访问服务属性前必须在插件定义里声明 `inject:['systemPrompt']`**，否则 `apply` 里一碰 `ctx.systemPrompt` 就抛 `Error: cannot get property "systemPrompt" without inject` 导致整个插件不激活 | `@deepseek-ai/cordis/src/context.ts` 代理 + `reflect.ts:144` |
+| bundle 声明 | npm 包必须在 `package.json` 写 `"dsh": { "bundle": { "patch": "./cordis.patch.yml" } }`，否则 `dsh plugin add` 报 `declares no dsh.bundle` | `@deepseek-ai/cordis-plugin-loader` 校验 + `skills/cordis-plugin-development/references/host-plugin.md` |
 
 ## 关键设计取舍（已落实在 src/index.ts）
 
