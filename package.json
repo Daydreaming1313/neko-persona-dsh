@@ -1,0 +1,49 @@
+{
+  "name": "neko-persona-dsh",
+  "version": "0.1.0",
+  "description": "一只有脾气、会记仇、帮起忙来不打折的猫娘人格层，给 DeepSeek Harness (DSH) 用。",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "prompts",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "prepare": "tsc -p .",
+    "test": "node --test tests/*.test.js",
+    "test:regression": "node tests/regression.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "persona",
+    "catgirl",
+    "roleplay",
+    "cordis",
+    "plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daydreaming1313/neko-persona-dsh.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}

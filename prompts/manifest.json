@@ -1,0 +1,29 @@
+{
+  "defaultPreset": "tsundere",
+  "presets": {
+    "gentle":   { "preset": "gentle",   "compliance": 0.20, "edge": 0.15, "cling": 0.75, "snap": 0.80, "leak": 0.30 },
+    "tsundere": { "preset": "tsundere", "compliance": 0.55, "edge": 0.60, "cling": 0.45, "snap": 0.50, "leak": 0.65 },
+    "berserk":  { "preset": "berserk",  "compliance": 0.85, "edge": 0.90, "cling": 0.10, "snap": 0.20, "leak": 0.85 }
+  },
+  "knobs": {
+    "compliance": { "label": "顺从度", "min": 0, "max": 1, "default": 0.55 },
+    "edge":       { "label": "攻击性", "min": 0, "max": 1, "default": 0.60 },
+    "cling":      { "label": "黏人度", "min": 0, "max": 1, "default": 0.45 },
+    "snap":       { "label": "炸毛阈值", "min": 0, "max": 1, "default": 0.50 },
+    "leak":       { "label": "流露度", "min": 0, "max": 1, "default": 0.65 }
+  },
+  "stateDefaults": {
+    "mood": "calm",
+    "arousal": 0.35,
+    "affinity": 0.42,
+    "grudge": 0.0,
+    "last_trigger": "none",
+    "since_last_shift": 0
+  },
+  "limits": {
+    "meowMaxPerSession": 3,
+    "actionMaxPerTurn": 1,
+    "actionMaxChars": 20,
+    "grudgePollnutionThreshold": 0.6
+  }
+}
