@@ -1,6 +1,6 @@
 {
   "name": "neko-persona-dsh",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "一只有脾气、会记仇、帮起忙来不打折的猫娘人格层，给 DeepSeek Harness (DSH) 用。",
   "type": "module",
   "main": "lib/index.js",

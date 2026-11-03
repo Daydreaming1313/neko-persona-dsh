@@ -188,9 +188,16 @@ function lastAssistantText(agent: AgentLike | undefined): string {
   return ''
 }
 
-// cordis 4 插件出口：export default { name, apply }
+// cordis 4 插件出口：export default { name, apply, inject }
+//
+// 关键：cordis 的 ctx 经过依赖注入代理，访问服务属性（如 ctx.systemPrompt）前
+// 必须在插件定义里通过 inject 声明依赖，否则会抛
+//   Error: cannot get property "systemPrompt" without inject
+// 声明后，只有当 systemPrompt 服务就绪时插件才会被激活（activate）。
 const plugin = {
   name: 'neko-persona',
+  // 声明本插件依赖的服务；未声明则 cordis 在 apply 里访问 ctx.systemPrompt 直接报错
+  inject: ['systemPrompt'] as const,
   apply(ctx: ContextLike, config: NekoConfig = {}) {
     applyPlugin(ctx, config ?? {})
   },
