@@ -22,11 +22,18 @@
     "dsh",
     "persona",
     "catgirl",
+    "猫娘",
     "roleplay",
+    "ai-agent",
     "cordis",
     "plugin"
   ],
   "license": "MIT",
+  "author": "Daydreaming1313 <1287909193@qq.com>",
+  "homepage": "https://github.com/Daydreaming1313/neko-persona-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/Daydreaming1313/neko-persona-dsh/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Daydreaming1313/neko-persona-dsh.git"
