@@ -13,10 +13,10 @@
 
 ```bash
 # 方式 A：本地路径（零构建，推荐先试）
-dsh plugin --profile desktop add "file:/绝对路径/neko-persona-dsh"
+dsh plugin --profile desktop add "file:D:/HuaweiMoveData/Users/19332/Desktop/neko-persona-dsh"
 
 # 方式 B：GitHub（git 托管，安装时按 prepare 脚本构建）
-dsh plugin --profile desktop add github:<you>/neko-persona-dsh
+dsh plugin --profile desktop add github:Daydreaming1313/neko-persona-dsh
 
 # 方式 C：已发布的 npm 包
 dsh plugin --profile desktop add neko-persona-dsh
